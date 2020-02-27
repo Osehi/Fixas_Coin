@@ -1,7 +1,10 @@
 package com.polish.fixascryptocoin.model
 
 
+
 import com.google.gson.annotations.SerializedName
+
+
 
 data class CryptoCoin(
     @SerializedName("available_supply")
@@ -14,7 +17,7 @@ data class CryptoCoin(
     @SerializedName("market_cap_usd")
     val marketCapUsd: String,
     @SerializedName("max_supply")
-    val maxSupply: String,
+    val maxSupply: String? = null,
     val name: String,
     @SerializedName("percent_change_1h")
     val percentChange1h: String,
