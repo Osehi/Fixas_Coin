@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/content_graph"
+    app:startDestination="@id/cryptoCoin_Display">
+
+
+    <fragment
+        android:id="@+id/cryptoCoin_Display"
+        android:name="com.polish.fixascryptocoin.ui.CryptoCoin_Display"
+        android:label="fragment_crypto_coin__display"
+        tools:layout="@layout/fragment_crypto_coin__display" />
+</navigation>

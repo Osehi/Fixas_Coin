@@ -1,6 +1,7 @@
 package com.polish.fixascryptocoin.network
 
 import com.google.gson.annotations.SerializedName
+import com.polish.fixascryptocoin.database.DatabaseCryptoCoin
 import com.polish.fixascryptocoin.model.CryptoCoin
 import com.squareup.moshi.JsonClass
 
@@ -60,4 +61,32 @@ fun NetworkCoinContainer.asDomainModel():List<CryptoCoin> {
             totalSupply = it.totalSupply
         )
     }
+}
+
+/*
+   * Convert Network results to database objects
+   *
+ */
+
+fun NetworkCoinContainer.asDatabaseModel(): List<DatabaseCryptoCoin> {
+
+    return coins.map{
+        DatabaseCryptoCoin(
+            availableSupply = it.availableSupply,
+            hVolumeUsd = it.hVolumeUsd,
+            id = it.id,
+            lastUpdated = it.lastUpdated,
+            marketCapUsd =it.marketCapUsd,
+            name = it.name,
+            percentChange1h = it.percentChange1h,
+            percentChange24h = it.percentChange24h,
+            percentChange7d = it.percentChange7d,
+            priceBtc = it.priceBtc,
+            priceUsd = it.priceUsd,
+            rank = it.rank,
+            symbol = it.symbol,
+            totalSupply = it.totalSupply
+        )
+    }
+
 }

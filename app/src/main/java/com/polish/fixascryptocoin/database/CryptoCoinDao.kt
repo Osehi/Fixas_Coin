@@ -11,6 +11,6 @@ interface CryptoCoinDao {
     fun getCryptoCoins(): LiveData<List<DatabaseCryptoCoin>>
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    fun inserAll(coins:List<DatabaseCryptoCoin>)
+    fun insertAll(coins:List<DatabaseCryptoCoin>)
 
 }
