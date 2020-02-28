@@ -50,13 +50,7 @@ class CryptoCoinViewModel(application: Application): AndroidViewModel(applicatio
         viewModelScope.launch {
 
             _allCoin.value = repository.getCryptoCoinResponse()
-//            try {
-//                _allCoin.value = repository.getCryptoCoinResponse()
-//                _isNetworkErrorShown.value = false
-//
-//            } catch (networkError: IOException){
-//
-//            }
+
         }
 
     }
