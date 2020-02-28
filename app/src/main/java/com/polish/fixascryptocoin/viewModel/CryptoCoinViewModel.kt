@@ -20,6 +20,10 @@ class CryptoCoinViewModel(application: Application): AndroidViewModel(applicatio
     val allCryptoCoin = repository.getAllCryptoCoin()
 
 
+    private val _workingModel = MutableLiveData<Boolean>(true)
+    val workingModel:LiveData<Boolean> = _workingModel
+
+
     // create a coroutinescope
     private val viewModelJob = Job()
     private val viewModelScope = CoroutineScope(viewModelJob + Dispatchers.Main)
