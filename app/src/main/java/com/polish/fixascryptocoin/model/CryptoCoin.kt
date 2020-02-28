@@ -1,9 +1,11 @@
 package com.polish.fixascryptocoin.model
 
 
+import androidx.room.Entity
 import androidx.room.PrimaryKey
 import com.google.gson.annotations.SerializedName
 
+@Entity(tableName = "cryptoCoin_table")
 data class CryptoCoin(
     @SerializedName("available_supply")
     val availableSupply: String,
